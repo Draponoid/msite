@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.mkey.android",
+      "sha256_cert_fingerprints": [
+        "0A:08:A2:C3:5A:D8:82:78:C5:22:CC:34:98:C1:E9:9B:A9:B7:7E:C9:47:D4:9E:4A:A1:4D:3A:88:A8:43:8F:1E"
+      ]
+    }
+  }
+]

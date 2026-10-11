@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru" data-l="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>MKey — мессенджер без номера телефона</title>
+<meta name="description" content="MKey — мессенджер со сквозным шифрованием. Регистрация по логину и паролю, без номера телефона.">
+<meta name="theme-color" content="#050A15">
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="/"><img src="/icon.png" alt="" width="40" height="40"><span>MKey</span></a>
+  <button id="lang" type="button" aria-label="Language">EN</button>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>
+      <span class="ru">Мессенджер без номера телефона</span>
+      <span class="en">A messenger without phone numbers</span>
+    </h1>
+    <p class="lead">
+      <span class="ru">MKey шифрует переписку, звонки и файлы на вашем устройстве. Регистрация — по логину и паролю: ни номера, ни почты не нужно.</span>
+      <span class="en">MKey encrypts messages, calls and files on your device. You sign up with a username and a password — no phone number, no email required.</span>
+    </p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2><span class="ru">Сквозное шифрование</span><span class="en">End-to-end encryption</span></h2>
+      <p><span class="ru">Личные чаты и приватные группы читают только участники. Сервер хранит шифртекст и удаляет его после доставки.</span>
+         <span class="en">Direct chats and private groups are readable only by their members. The server stores ciphertext and deletes it after delivery.</span></p>
+    </div>
+    <div class="card">
+      <h2><span class="ru">Ключ — у вас</span><span class="en">You hold the key</span></h2>
+      <p><span class="ru">Аккаунт и переписку возвращают 12 слов, которые знаете только вы. Мы их не знаем и восстановить не можем.</span>
+         <span class="en">Your account and history are recovered with 12 words only you know. We do not have them and cannot restore them.</span></p>
+    </div>
+    <div class="card">
+      <h2><span class="ru">Windows и Android</span><span class="en">Windows and Android</span></h2>
+      <p><span class="ru">Одна переписка на нескольких устройствах: новое подключается по QR-коду. Версия для Android есть и без сервисов Google.</span>
+         <span class="en">One history on several devices: a new one is linked with a QR code. The Android app is also available without Google services.</span></p>
+    </div>
+  </section>
+
+  <section id="get" class="card">
+    <h2><span class="ru">Как получить</span><span class="en">How to get it</span></h2>
+    <p><span class="ru">MKey в закрытом тестировании: сборки для Windows и Android раздаются по приглашению. Если вас сюда привела ссылка знакомого — попросите у него установочный файл.</span>
+       <span class="en">MKey is in closed testing: Windows and Android builds are shared by invitation. If a friend's link brought you here, ask them for the installer.</span></p>
+  </section>
+
+  <section>
+    <h2><span class="ru">Что видит сервер</span><span class="en">What the server sees</span></h2>
+    <p class="muted"><span class="ru">Коротко и без приукрашивания. Скрыть от сервера всё мессенджер не может — вот что он знает и чего не знает.</span>
+       <span class="en">Short and unvarnished. A messenger cannot hide everything from its server — here is what ours knows and does not know.</span></p>
+    <div class="table">
+      <table>
+        <thead><tr>
+          <th><span class="ru">Что</span><span class="en">What</span></th>
+          <th><span class="ru">Как лежит на сервере</span><span class="en">How it is stored</span></th>
+        </tr></thead>
+        <tbody>
+          <tr><td><span class="ru">Сообщения личных чатов и приватных групп</span><span class="en">Messages in direct chats and private groups</span></td>
+              <td><span class="ru">Шифртекст; до доставки, не дольше 15 суток</span><span class="en">Ciphertext; until delivered, 15 days at most</span></td></tr>
+          <tr><td><span class="ru">Файлы и медиа</span><span class="en">Files and media</span></td>
+              <td><span class="ru">Шифртекст; размер виден только приблизительно</span><span class="en">Ciphertext; only an approximate size is visible</span></td></tr>
+          <tr><td><span class="ru">Отправитель скрытого сообщения</span><span class="en">Sender of a sealed message</span></td>
+              <td><span class="ru">Не хранится</span><span class="en">Not stored</span></td></tr>
+          <tr><td><span class="ru">Состав приватной группы</span><span class="en">Private group membership</span></td>
+              <td><span class="ru">Зашифрован ключом группы</span><span class="en">Encrypted with the group key</span></td></tr>
+          <tr><td><span class="ru">Логин, имя, аватар</span><span class="en">Username, name, avatar</span></td>
+              <td><span class="ru">Открыто — по ним вас находят</span><span class="en">In the clear — this is how people find you</span></td></tr>
+          <tr><td><span class="ru">Пароль</span><span class="en">Password</span></td>
+              <td><span class="ru">Хеш от ключа, выведенного на вашем устройстве</span><span class="en">A hash of a key derived on your device</span></td></tr>
+          <tr><td><span class="ru">Каналы и публичные группы</span><span class="en">Channels and public groups</span></td>
+              <td><span class="ru">Открытый текст — они публичны по замыслу</span><span class="en">Plain text — they are public by design</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="ru">Чего пока нет</span><span class="en">What is not there yet</span></h2>
+    <ul class="limits">
+      <li><span class="ru">Внешнего аудита криптографии не было. Стек стандартный (Olm, X25519, Ed25519, ML-KEM-768, Argon2id), но собран одним разработчиком.</span>
+          <span class="en">There has been no external cryptography audit. The stack is standard (Olm, X25519, Ed25519, ML-KEM-768, Argon2id) but assembled by a single developer.</span></li>
+      <li><span class="ru">Сервер не хранит, кто с кем переписывается, но оператор, записывающий живой трафик, может это связать.</span>
+          <span class="en">The server does not store who talks to whom, but an operator recording live traffic could link it.</span></li>
+      <li><span class="ru">Приватная группа — до 10 участников. Видеозвонков нет.</span>
+          <span class="en">A private group holds up to 10 members. There are no video calls.</span></li>
+    </ul>
+    <p class="muted"><span class="ru">Не полагайтесь на MKey там, где цена ошибки высока.</span>
+       <span class="en">Do not rely on MKey where the cost of a mistake is high.</span></p>
+  </section>
+</main>
+
+<footer>
+  <span class="ru">MKey — личный проект одного разработчика.</span>
+  <span class="en">MKey is a one-person project.</span>
+</footer>
+</body>
+</html>
