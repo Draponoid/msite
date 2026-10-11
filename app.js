@@ -1,5 +1,5 @@
 // Общий скрипт главной и 404.html. Выбирает язык; на 404.html разбирает адрес: /@логин —
-// ссылка на профиль (карточка с кнопкой, открывающей приложение), иначе «страницы нет».
+// ссылка на профиль (приложение открывается само, кнопка — запасной путь), иначе «страницы нет».
 (() => {
   const root = document.documentElement;
 
@@ -45,8 +45,19 @@
   }
   const login = '@' + m[1];
   document.getElementById('login').textContent = login;
-  document.getElementById('open').href = 'mkey://user/' + login;
+  const link = 'mkey://user/' + login;
+  document.getElementById('open').href = link;
   profile.hidden = false;
+  // Сразу пробуем открыть приложение, как это делает страница t.me: браузер либо спросит
+  // «Открыть MKey?», либо молча ничего не сделает, если приложения нет, — тогда остаётся
+  // кнопка. Неизвестную схему часть браузеров отвергает исключением.
+  setTimeout(() => {
+    try {
+      location.href = link;
+    } catch (_) {
+      // Приложения нет или браузер не пускает без нажатия — человек нажмёт кнопку сам.
+    }
+  }, 150);
   titles.ru = titles.en = login + ' — MKey';
   document.title = titles.ru;
 })();
