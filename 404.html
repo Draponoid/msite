@@ -14,21 +14,24 @@
 </head>
 <body>
 <!-- Эту страницу GitHub Pages отдаёт на любой адрес, которого нет среди файлов. Адрес вида
-     /@логин — ссылка на профиль: app.js показывает карточку с кнопкой, открывающей
-     приложение. Всё остальное — «страница не найдена». -->
+     /c#<токен> — одноразовая ссылка на контакт: app.js показывает карточку с кнопкой,
+     открывающей приложение. Всё остальное — «страница не найдена». -->
 <header>
   <a class="brand" href="/"><img src="/icon.png" alt="" width="40" height="40"><span>MKey</span></a>
   <button id="lang" type="button" aria-label="Language">EN</button>
 </header>
 
 <main>
-  <section id="profile" class="card accent" hidden>
-    <p class="eyebrow"><span class="ru">Профиль в MKey</span><span class="en">MKey profile</span></p>
-    <h1 id="login"></h1>
-    <a id="open" class="button" href="/"><span class="ru">Написать в MKey</span><span class="en">Message in MKey</span></a>
+  <section id="contact" class="card accent" hidden>
+    <h1><span class="ru">Вас приглашают в MKey</span><span class="en">You are invited to MKey</span></h1>
+    <a id="open" class="button" href="/"><span class="ru">Открыть в MKey</span><span class="en">Open in MKey</span></a>
     <p class="muted">
-      <span class="ru">Кнопка открывает приложение MKey на этом устройстве. Если ничего не произошло — приложение не установлено.</span>
-      <span class="en">The button opens the MKey app on this device. If nothing happens, the app is not installed.</span>
+      <span class="ru">Ссылка одноразовая: её может открыть только один человек.</span>
+      <span class="en">This link is single-use: only one person can open it.</span>
+    </p>
+    <p class="muted">
+      <span class="ru">Кнопка открывает приложение MKey на этом устройстве. Если ничего не произошло — приложение не установлено: <a href="#get">как получить MKey</a>.</span>
+      <span class="en">The button opens the MKey app on this device. If nothing happens, the app is not installed: <a href="#get">how to get MKey</a>.</span>
     </p>
   </section>
 

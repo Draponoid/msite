@@ -47,12 +47,10 @@ h2 { font-size: 20px; margin: 0 0 10px; }
 p { margin: 0 0 12px; }
 .lead { font-size: 18px; color: var(--muted); max-width: 640px; }
 .muted { color: var(--muted); font-size: 14px; }
-.eyebrow { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
 
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
 .card p:last-child { margin-bottom: 0; color: var(--muted); }
 .card.accent { border-color: var(--accent); }
-.card.accent h1 { overflow-wrap: anywhere; }
 .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 
 .button {
